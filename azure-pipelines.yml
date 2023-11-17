@@ -3,11 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
+
+container: ubuntu:18.04
 
 steps:
-- bash: uname -r
+- script: printenv
